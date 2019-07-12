@@ -1,3 +1,4 @@
-a = 100
-b =200
-print ("Sum of a ans b is  ", a+b)
+
+x =111
+y =222
+print ("Sum of a ans b is  ", x+y)
