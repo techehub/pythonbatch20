@@ -1,6 +1,6 @@
 import logging
 
-logging.basicConfig(filename="test.log", level=logging.DEBUG)
+logging.basicConfig(filename="bbbbb.log", level=logging.ERROR)
 
 data= {"1111":10000,"2222":20000 }
 
@@ -14,16 +14,18 @@ class InsufficientFund(Exception):
     pass
 
 def withdraw(accNo, amount):
-    logging.info("111111")
+    logging.info(" withdraw function -start")
     if accNo not in data:
-        logging.debug("111111")
+        logging.debug( "Account Number is "+ accNo)
         raise InvalidAccount()
 
     if amount > data[accNo] :
-        logging.debug("22222")
+        logging.debug("Amout is " + accNo)
         raise InsufficientFund()
 
     data[accNo] = data[accNo]- amount
+    logging.info(" withdraw function -end")
+
 
 
 def main ():
